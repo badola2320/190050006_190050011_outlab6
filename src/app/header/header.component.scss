@@ -1,0 +1,25 @@
+nav a {
+    width: 50%;
+    text-align: center;
+    text-decoration: underline;
+    font-family: monospace;
+    font-weight: 900;
+    margin-top: 7.5px;
+    display: inline-block;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+    font-size: x-large;
+  }
+  
+    nav a:visited, a:link {
+      color: #41803c;  
+    }
+  
+    nav a:hover {
+      color: blue;
+      background-color: lightskyblue;
+    }
+  
+    nav a.active {
+      color: blue;
+    }

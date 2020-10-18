@@ -1,0 +1,52 @@
+<div class="about-section">
+    <h1 class="heading1">Form Page</h1>
+</div>
+<form novalidate [formGroup]="user">
+  <div class="two">
+    <label class="one">
+        <span>Name:</span><br>
+    </label>
+        <input class="one"
+        [(ngModel)]="postData.name"
+        type="text"
+        placeholder="Name"
+        formControlName="name">
+  </div>
+  <div class="two">
+    <label class="one">
+        <span>Email:</span><br>
+    </label>
+        <input class="one"
+        [(ngModel)]="postData.email"
+        type="email"
+        placeholder="Email"
+        formControlName="email">
+  </div>
+  <div class="two">
+    <label class="one" for="feedback">Feedback:</label><br>
+      <input class="one" [(ngModel)]="postData.feedback" id="Great" type="radio" value="Great" name="feedback" formControlName="feedback">
+      <label class="four" for="Great">Great</label>
+      <input [(ngModel)]="postData.feedback" id="Okay" type="radio" value="Okay" name="feedback" formControlName="feedback">
+      <label class="four" for="Okay">Okay</label>
+      <input [(ngModel)]="postData.feedback" id="Not good" type="radio" value="Not good" name="feedback" formControlName="feedback">
+      <label class="four" for="Not good">Not good</label>
+  </div>
+  <div class="two">
+    <label class="one">
+        <span>Comment:</span><br>
+    </label>
+        <textarea
+        [(ngModel)]="postData.comment"
+        type="text"
+        placeholder="Comment"
+        formControlName="comment" class="textarea1 one"></textarea>
+  </div>
+  <p><button class="button" (click)="onSubmit()">Submit</button></p>
+</form>
+
+<div class="three">
+  <div>Name: {{ getData.name }}</div>
+  <div>Email: {{ getData.email }}</div>
+  <div>Feedback: {{ getData.feedback }}</div>
+  <div>Comment: {{ getData.comment }}</div>
+</div>
